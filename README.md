@@ -21,6 +21,17 @@ python -m factscore.preprocess
 python -m factscore.factscorer --input_path "ChatGPT_bbc.jsonl" --model_name "retrieval+llama+npm" --knowledge_source "bbc" --n_samples "50"
 ```
 
+Citation:
+```bash
+@inproceedings{ factscore,
+    title={ {FActScore}: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation },
+    author={ Min, Sewon and Krishna, Kalpesh and Lyu, Xinxi and Lewis, Mike and Yih, Wen-tau and Koh, Pang Wei and Iyyer, Mohit and Zettlemoyer, Luke and Hajishirzi, Hannaneh },
+    year={ 2023 },
+    booktitle = { EMNLP },
+    url={ https://arxiv.org/abs/2305.14251 }
+}
+```
+
 ### LongDocFACTScore Evaluation
 
 1. Run the following
@@ -34,4 +45,14 @@ pip install -r requirements.txt
 ```bash 
 cd ..
 python evaluation_scripts/run_evaluation_bbc.py
+```
+
+Citation:
+```bash
+@article{bishop2023longdocfactscore,
+  title={LongDocFACTScore: Evaluating the Factuality of Long Document Abstractive Summarisation},
+  author={Bishop, Jennifer A and Xie, Qianqian and Ananiadou, Sophia},
+  journal={arXiv preprint arXiv:2309.12455},
+  year={2023}
+}
 ```
