@@ -1,11 +1,15 @@
-huggingface-cli login 
+### FActScore Evaluation
 
-python -m factscore.download_data --llama_7B_HF_path "meta-llama/Llama-2-7b-chat-hf"
+1. Install Required Packages
+   - `pip install -r requirements.txt`
+2. Login to Huggingface
+   - `huggingface-cli login`
+3. Download the Model
+   - `python -m factscore.download_data --llama_7B_HF_path "meta-llama/Llama-2-7b-chat-hf"`
+4. Register a New Corpus
+   - `python -m factscore.preprocess`
+5. Run FActScore
+   - `python -m factscore.factscorer --input_path "ChatGPT_bbc.jsonl" --model_name "retrieval+llama+npm" --knowledge_source "bbc" --n_samples "50"`
 
-pip install -r .\requirements.txt
+### LongDocFACTScore Evaluation
 
-register new corpus: python -m factscore.preprocess_duc2004
-
-pickle error: re-register the corpus (delete previous pkl of that corpus)
-
-python -m factscore.factscorer --input_path "D:\FActScore-main2\FActScore-main\ChatGPT_bbc.jsonl" --model_name "retrieval+llama+npm" --knowledge_source "bbc_knowledge" --n_samples "50"
