@@ -1,5 +1,7 @@
 ### FActScore Evaluation
 
+Improved version of FActScore from both https://github.com/shmsw25/FActScore/tree/main and https://github.com/wj210/factscore
+
 1. Install Required Packages
 ```
 pip install -r requirements.txt
